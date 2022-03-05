@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<body class="bg-light">
   
   <div class="row">
     <div class="mt-5">
@@ -15,6 +14,5 @@
       </div>
     </div>
   </div>
-</body>
 
 @endsection

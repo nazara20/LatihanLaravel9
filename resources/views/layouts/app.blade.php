@@ -9,7 +9,7 @@
 
     <title>{{ env('APP_NAME') }}</title>
   </head>
-  <body>
+  <body class="bg-light">
     @include('includes.navbar')
 
     <div class="container">
