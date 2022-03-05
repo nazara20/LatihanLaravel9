@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<body class="bg-light">
+    
 
 <div class="row mt-5">
 
@@ -68,4 +70,5 @@
             </div>
     </div>
 </div>
+</body>
 @endsection

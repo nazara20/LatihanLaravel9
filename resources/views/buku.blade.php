@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-
+<body class="bg-light">
+  
 <div class="row justify-content-center p-4">
     <div class="card mr-2" style="width: 17rem;">
         <img class="card-img-top" src="{{ asset('assets/image/book.jpg') }}" alt="Card image cap">
@@ -32,4 +33,6 @@
       </div>
 
 </div>
+</body>
+
 @endsection
