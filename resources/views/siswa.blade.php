@@ -22,12 +22,16 @@
               <td>{{ $users->name }}</td>
               <td>{{ $users->email }}</td>
               <td>{{ $users->siswa->phone }}</td>
+              @foreach ($users->books as $book)
+                                    <td><a href="{{ route('book.user', $book->id) }}">{{ $book->name }}</a>
+                                    </td>
+                                @endforeach
             </tr>
           @endforeach
         </tbody>
       </table>
     </div>
-
+    {{ $user->links() }}
   </div>
 </div>
 
