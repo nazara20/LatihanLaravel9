@@ -25,3 +25,4 @@ Route::get('/siswa', [UserController::class, 'index'])->name('siswa');
 
 Route::get('/books.detail/{slug}', [CategoryController::class, 'bukudetail'])->name('books.detail');
 Route::get('/category.detail/{id}', [CategoryController::class, 'categorydetail'])->name('category.detail');
+Route::get('/students', [StudentController::class,'index'])->name('students');
