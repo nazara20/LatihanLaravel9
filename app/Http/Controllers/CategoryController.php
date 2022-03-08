@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Books;
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -28,8 +29,18 @@ class CategoryController extends Controller
 
     public function bukudetail($slug)
     {
-        $books = Books::whereSlug($slug)->firstOrFail();
+        $books = Books::withCount('Reviews')->whereSlug($slug)->firstOrFail();
+        $reviews = $books->reviews()->with('user')->paginate(2);
 
-      return view('books.detail', compact('books'));
+      return view('books.detail', compact('books', 'reviews'));
+
+    }
+
+    public function user($id)
+    {
+      $user = User::whereId($id)->firstOrFail();
+      $books = $user->books()->latest()->get();
+
+      return view('book.user', compact('user', 'books'));
     }
 }

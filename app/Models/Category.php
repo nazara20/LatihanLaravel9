@@ -9,6 +9,8 @@ class Category extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+    protected $table = "categories";
    public function books() {
         return $this->hasOne(Books::class);
     }

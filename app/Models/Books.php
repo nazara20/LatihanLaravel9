@@ -9,7 +9,23 @@ class Books extends Model
 {
     use HasFactory;
 
-    // public function category() {
-    //     return $this->hasOne(Category::class);
+    // protected $with = ['category', 'users'];
+    // protected $withCount = ['reviews'];
+ 
+    // protected $table = "books"; 
+
+    // public function category(){ 
+    //     return $this->belongsTo(Category::class);
     // }
+
+    // public function users()
+    // {
+    //     return $this->belongsToMany(User::class);
+    // }
+
+    // public function reviews()
+    // {
+    //     return $this->morphMany(Review::class, 'reviewable');
+    // }
+
 }
